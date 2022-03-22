@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">study</string>
+    <string name="username">用户名</string>
+    <string name="register">注册</string>
+    <string name="确认密码">确认密码</string>
+    <string name="密码">密码</string>
+    <string name="登录">登录</string>
+    <string name="reset">重置</string>
+    <string name="age">年龄</string>
+</resources>
