@@ -23,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
         Button btnLogin = findViewById(R.id.btnRegister);
         Button btnReset = findViewById(R.id.bitRest);
         Button btnReg = findViewById(R.id.register);
+        Button btnUser = findViewById(R.id.set_btn);
         ActivityResultLauncher<Intent> launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
             Intent data = result.getData();
             String name = null;
@@ -59,24 +60,11 @@ public class LoginActivity extends AppCompatActivity {
         btnReg.setOnClickListener(view -> {
             Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
             launcher.launch(intent);
-//            startActivityForResult(intent, 1);
+        });
+        btnUser.setOnClickListener(view -> {
+            Intent intent = new Intent(LoginActivity.this, UserProfile.class);
+            launcher.launch(intent);
         });
 
     }
-//    @Override
-//    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-//        super.onActivityResult(requestCode, resultCode, data);
-//        if (requestCode==1 && resultCode == RESULT_OK) {
-//            String name = null;
-//            if (data != null) {
-//                name = data.getStringExtra("name");
-//            }
-//            String pwd = null;
-//            if (data != null) {
-//                pwd = data.getStringExtra("pwd");
-//            }
-//            editName.setText(name);
-//            editPwd.setText(pwd);
-//        }
-//    }
 }
